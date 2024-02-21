@@ -24,6 +24,144 @@ export default defineConfig({
     root: {
       label: '中文',
       lang: 'zh'
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      title: 'LittleSkin User Manual',
+      themeConfig: {
+        logo: '/favicon.png',
+        // https://vitepress.dev/reference/default-theme-config
+        nav: [
+          { text: 'Return to LittleSkin', link: 'https://littlesk.in/' },
+          { text: 'Community Support Robot', link: 'https://bot-manual.commspt.littlesk.in/' },
+          { text: 'Sponsor Support', link: 'https://afdian.net/a/tnqzh123' }
+        ],
+
+        docFooter: {
+          prev: 'Previous Page',
+          next: 'Next Page'
+        },
+        langMenuLabel: 'Multilingual',
+        returnToTopLabel: 'Return to Top',
+        sidebarMenuLabel: 'Catalog',
+        darkModeSwitchLabel: 'Theme',
+        lightModeSwitchTitle: 'Switch to Light Mode',
+        darkModeSwitchTitle: 'Switch to Dark Mode',
+        externalLinkIcon: true,
+        lastUpdated: {
+          text: 'Last updated on'
+        },
+        outline: {
+          'label': 'On this page'
+        },
+        editLink: {
+          pattern: 'https://github.com/LittleSkinCommspt/manual-ng/edit/main/docs/:path',
+          text: 'Help us improve this page'
+        },
+        search: {
+          provider: 'local',
+          options: {
+            locales: {
+              en: {
+                translations: {
+                  button: {
+                    buttonText: 'Search Documents',
+                    buttonAriaLabel: 'Search Documents'
+                  },
+                  modal: {
+                    noResultsText: 'No relevant results found',
+                    resetButtonTitle: 'Clear Query',
+                    footer: {
+                      selectText: 'Select',
+                      navigateText: 'Switch'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+
+        sidebar: {
+          '/': [
+            {
+              text: 'User Manual',
+              link: '/en/',
+              items: [
+                {
+                  text: 'Policy Terms',
+                  link: '/en/policies/',
+                  items: [
+                    { text: 'User Service Terms', link: '/en/policies/tos' },
+                    { text: 'Privacy Statement', link: '/en/policies/privacy' }
+                  ]
+                },
+                {
+                  text: 'Newbie Guide',
+                  link: '/en/newbee/',
+                  items: [
+                    { text: 'Create Character', link: '/en/newbee/player' },
+                    { text: 'Set Texture', link: '/en/newbee/textures' },
+                    { text: 'Configure Mod', link: '/en/newbee/mod' }
+                  ]
+                },
+                { text: 'Score System', link: '/en/score' },
+                {
+                  text: 'Yggdrasil External Login',
+                  link: '/en/yggdrasil/',
+                  items: [
+                    { text: 'Configure Client', link: '/en/yggdrasil/client' },
+                    {
+                      text: 'Configure Server',
+                      link: '/en/yggdrasil/server',
+                      items: [
+                        { text: 'authlib-injector', link: '/en/yggdrasil/authlib-injector' },
+                        { text: 'MultiLogin', link: '/en/yggdrasil/multilogin' }
+                      ]
+                    }
+                  ]
+                },
+              ]
+            },
+            {
+              text: 'Problems and Solutions',
+              link: '/en/problems',
+              items: [
+                {
+                  text: 'Frequently Asked Questions',
+                  link: '/en/faq/',
+                  items: [
+                    { text: 'Site Usage Related', link: '/en/faq/site' },
+                    { text: 'In-game Usage Related', link: '/en/faq/in-game' },
+                  ]
+                },
+
+              ]
+            },
+            {
+              text: 'Communication and Interaction',
+              items: [
+                { text: 'User Group', link: '/en/user-group' },
+                { text: 'Email Ticket', link: '/en/email' }
+              ]
+            },
+            {
+              text: 'Advanced Features',
+              link: '/en/advanced/',
+              items: [
+                { text: 'OAuth 2', link: '/en/advanced/oauth2' },
+                { text: 'LittleSkin API', link: '/en/advanced/api' },
+              ]
+            },
+          ]
+        },
+
+        socialLinks: [
+          { icon: 'github', link: 'https://github.com/LittleSkinCommspt/manual-ng' },
+        ],
+
+      },
     }
   },
 
